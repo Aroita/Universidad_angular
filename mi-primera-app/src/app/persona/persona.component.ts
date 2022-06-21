@@ -11,6 +11,7 @@ export class PersonaComponent {
   apellido: string = 'Irmo';
   private edad: number = 28;
 
+  //metodo para manejar atributo privado (edad)
   getEdad():number{
     return this.edad;
   }
