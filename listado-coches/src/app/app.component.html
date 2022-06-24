@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="col">
+    <h3>{{titulo}}</h3>
+  </div>
+  <br>
+
+  <form class="row g-3">
+    <div class="form-group col-auto">
+      <label for="coche" >Coche:</label>
+      <input type="text" name="coche" id="coche" placeholder="Coche" class="form-control" [(ngModel)]="cocheInput">
+    </div>
+    <div class="col-auto">
+      <label for="modelo" >Modelo:</label>
+      <input type="text" name="modelo" id="modelo" placeholder="Modelo" class="form-control" [(ngModel)]="modeloInput">
+    </div>
+    <div class="col-auto ">
+      <button type="submit" class="btn btn-primary mb-3" (click)="agregarCoche()">Agregar</button>
+    </div>
+  </form>
+</div><br>
+<hr/>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let coche of coches; let i = index">
+        
+        {{i+1}} - {{coche.marca}} {{coche.modelo}}
+      </div>
+    </div>
+  </div>
+</div>
